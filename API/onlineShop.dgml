@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Category="Database" Bounds="224.268333333333,-535.899633333422,370.743333333333,429.8" Group="Expanded" Label="onlineShop.db" LayoutSettings="TopToBottom" UseManualLocation="True" />
+    <Node Id="ProductBrand" Category="Table" Bounds="244.268333333333,-268.019033333422,112.406666666667,141.9203" Group="Expanded" Label="ProductBrand" />
+    <Node Id="ProductBrand_Id" Category="Field Primary" Bounds="274.623316786024,-228.019171380206,50,25.96" Description="bigint" Label="Id" />
+    <Node Id="ProductBrand_Name" Category="Field Optional" Bounds="274.623341606988,-172.059172295733,51.6966666666667,25.96" Description="text" Label="Name" />
+    <Node Id="ProductType" Category="Table" Bounds="387.394969482422,-268.019033333422,106.153333333333,141.9203" Group="Expanded" Label="ProductType" />
+    <Node Id="ProductType_Id" Category="Field Primary" Bounds="414.623316786024,-228.019171380206,50,25.96" Description="bigint" Label="Id" />
+    <Node Id="ProductType_Name" Category="Field Optional" Bounds="414.62331108941,-172.059172295733,51.6966666666667,25.96" Description="text" Label="Name" />
+    <Node Id="Products" Category="Table" Bounds="305.931634250217,-495.899533333422,269.080008544922,197.880447609955" Group="Expanded" Label="Products" />
+    <Node Id="Products_Description" Category="Field" Bounds="427.731650729709,-399.939177178545,80.2533333333333,25.96" Description="text" Label="Description" />
+    <Node Id="Products_Id" Category="Field Primary" Bounds="325.931666395399,-455.899168633624,50,25.96" Description="bigint" Label="Id" />
+    <Node Id="Products_Name" Category="Field" Bounds="485.931630181206,-455.899168633624,51.6966666666667,25.96" Description="text" Label="Name" />
+    <Node Id="Products_PictureUrl" Category="Field" Bounds="325.931675550673,-399.939177178545,71.8,25.96" Description="text" Label="PictureUrl" />
+    <Node Id="Products_Price" Category="Field" Bounds="405.931666395399,-455.899168633624,50,25.96" Description="decimal" Label="Price" />
+    <Node Id="Products_ProductBrandId" Category="Field Foreign" Bounds="452.344976128472,-343.979185723467,102.666666666667,25.96" Description="bigint" Label="ProductBrandId" />
+    <Node Id="Products_ProductTypeId" Category="Field Foreign" Bounds="325.931634250217,-343.979185723467,96.4133333333334,25.96" Description="bigint" Label="ProductTypeId" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="ProductBrand" Category="Contains" />
+    <Link Source="Database" Target="ProductType" Category="Contains" />
+    <Link Source="Database" Target="Products" Category="Contains" />
+    <Link Source="ProductBrand" Target="ProductBrand_Id" Category="Contains" />
+    <Link Source="ProductBrand" Target="ProductBrand_Name" Category="Contains" />
+    <Link Source="ProductType" Target="ProductType_Id" Category="Contains" />
+    <Link Source="ProductType" Target="ProductType_Name" Category="Contains" />
+    <Link Source="Products" Target="Products_Description" Category="Contains" />
+    <Link Source="Products" Target="Products_Id" Category="Contains" />
+    <Link Source="Products" Target="Products_Name" Category="Contains" />
+    <Link Source="Products" Target="Products_PictureUrl" Category="Contains" />
+    <Link Source="Products" Target="Products_Price" Category="Contains" />
+    <Link Source="Products" Target="Products_ProductBrandId" Category="Contains" />
+    <Link Source="Products" Target="Products_ProductTypeId" Category="Contains" />
+    <Link Source="Products_ProductBrandId" Target="ProductBrand_Id" Category="Foreign Key" Bounds="318.144694525467,-300.01919128418,150.692743173326,85.6355843225648" Label="FK_Products_1_0" />
+    <Link Source="Products_ProductTypeId" Target="ProductType_Id" Category="Foreign Key" Bounds="369.468361777935,-300.019238894134,46.3993471456996,82.1635628152146" Label="FK_Products_0_0" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Database" />
+    <Category Id="Field" />
+    <Category Id="Field Foreign" />
+    <Category Id="Field Optional" />
+    <Category Id="Field Primary" />
+    <Category Id="Foreign Key" />
+    <Category Id="Table" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Description" Label="Description" Description="Description" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
