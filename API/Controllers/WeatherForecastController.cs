@@ -9,6 +9,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [ApiExplorerSettings(IgnoreApi = true)] // for swagger to ignore this controller since it doesn't have the http methods
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
